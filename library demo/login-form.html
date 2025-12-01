@@ -1,0 +1,44 @@
+<!-- login-form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Library Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login-form.css">
+</head>
+<body>
+    <!-- Login/Register Container -->
+    <div class="login-container" id="loginContainer">
+        <div class="login-header">
+            <h1 id="authTitle">School Library Login</h1>
+            <p class="login-subtitle">Manage books, borrow, and explore knowledge</p>
+        </div>
+        <form id="authForm">
+            <div class="input-group">
+                <label id="userLabel" for="username">
+                    <span class="icon">👤</span> Username
+                </label>
+                <input type="text" id="username" placeholder="Enter Your Username" required />
+            </div>
+            <div class="input-group">
+                <label id="passLabel" for="password">
+                    <span class="icon">🔒</span> Password
+                </label>
+                <input type="password" id="password" placeholder="Enter Your Password" required />
+            </div>
+            <button type="submit" id="authBtn">Log In</button>
+            <div class="message error" id="errorMessage"></div>
+            <div class="message success" id="successMessage"></div>
+        </form>
+        <div class="switch-modes">
+            <p id="switchMode" class="switch-mode">Not an admin? <a href="#" onclick="switchToClient(); return false;">Client Login/Register</a></p>
+            <p id="clientSwitch" class="switch-mode" style="display: none;">Admin access? <a href="#" onclick="switchToAdmin(); return false;">Admin Login</a></p>
+        </div>
+    </div>
+
+    <script src="login-form.js"></script>
+</body>
+</html>
+       
